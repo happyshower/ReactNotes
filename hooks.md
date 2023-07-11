@@ -10,11 +10,11 @@ const demoContext = createContext(defaultValue)  //defaultValue，当上下文�
 1.函数式获取context传递的值（不推荐）
 const A = () =>{
 	return (
-		<demoContext.Provider.Consumer>
+		<demoContext.Consumer>
 			{
 				data => <h1>{data}</h1>
 			}
-		<demoContext.Provider.Consumer>
+		<demoContext.Consumer>
 	)
 }
 2.通过hook useContext()来获取（推荐）
@@ -36,7 +36,6 @@ const A = () =>{
 若A组件和B组件内都使用了该hook，那么两个组件分别会生成该组件的状态和副作用的副本来保存两个组件的数据，两者的数据并不相通。
 3.自定义hook和普通函数：
 a.hook 函数也是特殊的函数
-b.若函数中使用了react的hooks,如useState、useEffect等来启动逻辑、添加状态或添加副作用，那该函数就就是一个hook
+b.若函数中使用了react的hooks,如useState、useEffect等来启动逻辑、添加状态或添加副作用，那该函数就是一个hook
 c.hook是以use为开头为约定，但并不是硬性要求。
 d.普通函数，其数据是在所有调用者中共享的；hook函数，其状态或者说数据存放于当前组件节点当中。
-
