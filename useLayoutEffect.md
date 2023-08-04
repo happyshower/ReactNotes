@@ -39,12 +39,6 @@ const LayoutDemo = () => {
 - useLayoutEffect是同步的，就是说在页面上出现dom元素之前，会等待useLayoutEffect的执行。也就是说，react处理的dom结构，在提交给浏览器渲染之前，会等待useLayoutEffect的再处理（也就是说会阻碍页面渲染）。
 - useEffect是异步的，对于每一个 effect 的 callback 都会放入任务队列，等到主线程任务完成，DOM 更新，js 执行完成，视图绘制完毕，才执行，所以 effect 回调函数不会阻塞浏览器绘制视图不会阻碍页面渲染，当浏览器已经渲染页面后，才会被执行。
 
-作者：菜鸟正在搬砖
-链接：https://juejin.cn/post/7152162479886303240
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
-
 ### useInsertionEffect
 
 - useInsertionEffect，允许开发人员在元素被插入到 DOM 中时执行一些操作。在 React 中，元素被插入到 DOM 中通常是在组件挂载时发生的可以在布局副作用触发之前将元素插入到 DOM
