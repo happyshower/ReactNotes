@@ -2,7 +2,7 @@
 
 ### 关键字
 
-- keyof；将一个类型映射为它所有成员名称的联合类型
+- keyof：将一个类型映射为它所有成员名称的联合类型
 
   ```ts
   type Human = { name: string; location: string };
