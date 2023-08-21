@@ -91,7 +91,7 @@
       console.log("First promise resolved:", result);
     })
     .catch((error) => {
-      console.error("First promise rejected:", error.message); // First promise resolved: Promise 2 rejected
+      console.error("First promise rejected:", error.message); // First promise rejected: Promise 2 rejected
     });
   ```
 
